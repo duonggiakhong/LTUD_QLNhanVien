@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
-using DAO_NhanVien;
+using DTO;
 using System.Data;
 
 namespace BUS
@@ -17,5 +17,17 @@ namespace BUS
         {
             return dalNhanVien.LayDSNhanVien();
         }
-    }
+        public bool ThemNV(DTO_NhanVien dto)
+        {
+            return dalNhanVien.ThemNVK(dto);
+        }
+        public bool SuaNV(DTO_NhanVien et)
+        {
+            return dalNhanVien.SuaNV(et);
+        }
+        public bool XoaNVK(DTO_NhanVien et)
+        {
+            return dalNhanVien.XoaNVK(et);
+        }
+    }   
 }

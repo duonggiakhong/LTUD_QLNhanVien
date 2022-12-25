@@ -32,5 +32,20 @@ namespace project_QLNV
             Form nhanVien = new frmNhanVien();
             nhanVien.ShowDialog();
         }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult ret = MessageBox.Show("Bạn có chắc thoát không", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+            if (ret == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void tsmNhanVien_Click(object sender, EventArgs e)
+        {
+            Form nhanVien = new frmNhanVien();
+            nhanVien.ShowDialog();
+        }
     }
 }

@@ -53,7 +53,6 @@
             this.txtTonGiao = new System.Windows.Forms.TextBox();
             this.txtDanToc = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.txtNoiSinh = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -66,9 +65,10 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
             this.panel1.SuspendLayout();
@@ -149,7 +149,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(265, 133);
+            this.label8.Location = new System.Drawing.Point(265, 33);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(60, 17);
             this.label8.TabIndex = 7;
@@ -169,7 +169,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(256, 35);
+            this.label10.Location = new System.Drawing.Point(256, 133);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 17);
             this.label10.TabIndex = 9;
@@ -286,7 +286,7 @@
             // 
             // txtDanToc
             // 
-            this.txtDanToc.Location = new System.Drawing.Point(331, 132);
+            this.txtDanToc.Location = new System.Drawing.Point(331, 32);
             this.txtDanToc.Name = "txtDanToc";
             this.txtDanToc.Size = new System.Drawing.Size(120, 20);
             this.txtDanToc.TabIndex = 16;
@@ -297,13 +297,6 @@
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(120, 20);
             this.txtHoTen.TabIndex = 16;
-            // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Location = new System.Drawing.Point(331, 32);
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(120, 20);
-            this.txtNgaySinh.TabIndex = 16;
             // 
             // txtNoiSinh
             // 
@@ -374,7 +367,7 @@
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnThoat);
-            this.panel1.Controls.Add(this.btnCapNhat);
+            this.panel1.Controls.Add(this.btnClear);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Location = new System.Drawing.Point(12, 181);
             this.panel1.Name = "panel1";
@@ -391,23 +384,25 @@
             this.btnThem.TabIndex = 17;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Blue;
-            this.btnSua.Location = new System.Drawing.Point(311, 9);
+            this.btnSua.Location = new System.Drawing.Point(309, 9);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 33);
             this.btnSua.TabIndex = 17;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Blue;
-            this.btnThoat.Location = new System.Drawing.Point(595, 9);
+            this.btnThoat.Location = new System.Drawing.Point(591, 9);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 33);
             this.btnThoat.TabIndex = 17;
@@ -415,27 +410,17 @@
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.ForeColor = System.Drawing.Color.Blue;
-            this.btnCapNhat.Location = new System.Drawing.Point(169, 9);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(75, 33);
-            this.btnCapNhat.TabIndex = 17;
-            this.btnCapNhat.Text = "Cập Nhật";
-            this.btnCapNhat.UseVisualStyleBackColor = true;
-            // 
             // btnXoa
             // 
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Blue;
-            this.btnXoa.Location = new System.Drawing.Point(453, 9);
+            this.btnXoa.Location = new System.Drawing.Point(450, 9);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 33);
             this.btnXoa.TabIndex = 17;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // panel2
             // 
@@ -476,6 +461,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(707, 171);
             this.panel2.TabIndex = 1;
+            // 
+            // txtNgaySinh
+            // 
+            this.txtNgaySinh.Location = new System.Drawing.Point(331, 133);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(200, 20);
+            this.txtNgaySinh.TabIndex = 17;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.Blue;
+            this.btnClear.Location = new System.Drawing.Point(168, 9);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 33);
+            this.btnClear.TabIndex = 17;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // frmNhanVien
             // 
@@ -525,7 +529,6 @@
         private System.Windows.Forms.TextBox txtTonGiao;
         private System.Windows.Forms.TextBox txtDanToc;
         private System.Windows.Forms.TextBox txtHoTen;
-        private System.Windows.Forms.TextBox txtNgaySinh;
         private System.Windows.Forms.TextBox txtNoiSinh;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtEmail;
@@ -533,7 +536,6 @@
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtChuyenMon;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThoat;
@@ -541,5 +543,7 @@
         private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DateTimePicker txtNgaySinh;
+        private System.Windows.Forms.Button btnClear;
     }
 }
