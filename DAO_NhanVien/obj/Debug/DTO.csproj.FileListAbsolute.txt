@@ -1,0 +1,5 @@
+C:\Users\khong\OneDrive\Tài liệu\Visual Studio 2015\Projects\project_QLNV\DAO_NhanVien\bin\Debug\DAO_NhanVien.dll
+C:\Users\khong\OneDrive\Tài liệu\Visual Studio 2015\Projects\project_QLNV\DAO_NhanVien\bin\Debug\DAO_NhanVien.pdb
+C:\Users\khong\OneDrive\Tài liệu\Visual Studio 2015\Projects\project_QLNV\DAO_NhanVien\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+C:\Users\khong\OneDrive\Tài liệu\Visual Studio 2015\Projects\project_QLNV\DAO_NhanVien\obj\Debug\DAO_NhanVien.dll
+C:\Users\khong\OneDrive\Tài liệu\Visual Studio 2015\Projects\project_QLNV\DAO_NhanVien\obj\Debug\DAO_NhanVien.pdb
